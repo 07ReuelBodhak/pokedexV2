@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { change } from "../../features/state";
 import Icon1 from "../SVG/Icon1";
+import Icon2 from "../SVG/Icon2";
 
 const Navbar: React.FC = () => {
   const dispatch = useDispatch();
@@ -40,9 +41,9 @@ const Navbar: React.FC = () => {
             currentOption === "about" ? "border-b-2 border-red-500" : ""
           } flex hover:opacity-60 transition-all duration-150 flex-row sm:gap-2 px-1  items-center`}
         >
-          <Icon1
+          <Icon2
             fillColor={`${currentOption === "about" ? "red" : "gray"}`}
-            className="h-7 w-12 sm:h-9"
+            className="h-7 w-12 sm:h-9 "
           />
           <p
             className={`${
