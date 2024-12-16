@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           onClick={() => handleOptionChange("home")}
           className={`${
             currentOption === "home" ? "border-red-500 border-b-2" : ""
-          } flex hover:opacity-60 transition-opacity duration-150 flex-row sm:gap-2 px-2  items-center`}
+          } flex hover:opacity-60 transition-all duration-150 flex-row sm:gap-2 px-2  items-center`}
         >
           {" "}
           <Icon1
