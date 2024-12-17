@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="bg-white transition-all gap-5 md:gap-7 md:px-12 lg:px-14 lg:gap-10 duration-150 flex px-5 sm:px-9 rounded-xl shadow-lg z-10 w-full h-[65px] sm:h-[70px]">
+      <div className="bg-white transition-all gap-5 md:gap-7 md:px-12 lg:px-14 lg:gap-10 duration-150 flex px-5 sm:px-9 rounded-xl shadow-lg z-20 w-full h-[65px] sm:h-[72px]">
         <button
           onClick={() => handleOptionChange("home")}
           className={`${
