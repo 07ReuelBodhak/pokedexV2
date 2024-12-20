@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Icon3 from "../SVG/Icon3";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPokemon } from "./app";
+import { RootState, AppDispatch } from "../../store";
+import Card from "../Card/Card";
 
 const Home: React.FC = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const pokemonDetails = useSelector(
+    (state: RootState) => state.App.pokemon_details.data
+  );
+  useEffect(() => {
+    if (pokemonDetails.length == 0) {
+      console.log("fetching pokemon");
+      dispatch(fetchPokemon());
+    }
+  }, [pokemonDetails, dispatch]);
+
+  pokemonDetails.forEach((pokemon) => {
+    // console.log(pokemon.description);
+  });
   const [isFocused, setIsFocused] = useState(false);
   const [pokemonName, setIsPokemonName] = useState("");
   const handleSearch = () => {
-    //comment
     alert("search is successfull");
   };
   return (
     <div className="flex py-4 flex-col md:flex-row">
-      <div className="flex-1 p-4">
+      <div className="flex flex-col md:w-3/4 w-full gap-5 p-4">
         <div className="relative flex w-full">
           <input
             onFocus={() => setIsFocused(true)}
@@ -29,8 +46,21 @@ const Home: React.FC = () => {
             <Icon3 className="w-5 sm:w-7" />
           </button>
         </div>
+        <div className="grid mt-4 grid-cols-2 gap-x-3 gap-y-10 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-4">
+          {pokemonDetails.map((pokemon, id) => (
+            <Card
+              key={id}
+              name={pokemon.name}
+              types={pokemon.types}
+              image={
+                pokemon.image.versions["generation-v"]["black-white"].animated
+                  .front_default
+              }
+            />
+          ))}
+        </div>
       </div>
-      <div className="hidden md:block md:w-1/3 bg-gray-100 p-4">
+      <div className="hidden rounded-xl md:block md:w-1/3 sticky top-4 h-[600px] bg-white p-4">
         <h2 className="text-xl font-semibold text-center">
           Right Side Extra Div
         </h2>

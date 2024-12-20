@@ -7,7 +7,7 @@ import Icon2 from "../SVG/Icon2";
 
 const Navbar: React.FC = () => {
   const dispatch = useDispatch();
-  const currentOption = useSelector((state: RootState) => state.navbar.option);
+  const currentOption = useSelector((state: RootState) => state.App.nav.option);
 
   const handleOptionChange = (newOption: string) => {
     dispatch(change(newOption));
@@ -15,11 +15,11 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="bg-white transition-all gap-5 md:gap-7 md:px-12 lg:px-14 lg:gap-10 duration-150 flex px-5 sm:px-9 rounded-xl shadow-lg z-20 w-full h-[65px] sm:h-[72px]">
+      <div className="bg-white transition-all gap-5 md:gap-7 md:px-12 lg:px-14 lg:gap-10 duration-150 flex px-5 sm:px-9 rounded-xl shadow-lg z-20 w-full min-h-[75px] sm:h-[72px]">
         <button
           onClick={() => handleOptionChange("home")}
           className={`${
-            currentOption === "home" ? "border-red-500 border-b-2" : ""
+            currentOption === "home" ? "border-red-500 border-b-[3.5px]" : ""
           } flex hover:opacity-60 transition-all duration-150 flex-row sm:gap-2 px-2  items-center`}
         >
           {" "}
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         <button
           onClick={() => handleOptionChange("about")}
           className={`${
-            currentOption === "about" ? "border-b-2 border-red-500" : ""
+            currentOption === "about" ? "border-red-500 border-b-[3.5px]" : ""
           } flex hover:opacity-60 transition-all duration-150 flex-row sm:gap-2 px-1  items-center`}
         >
           <Icon2

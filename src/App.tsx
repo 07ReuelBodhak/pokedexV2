@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import Home from "./componets/Home/Home";
 
 const App = () => {
-  const currentOption = useSelector((state: RootState) => state.navbar.option);
+  const currentOption = useSelector((state: RootState) => state.App.nav.option);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const App = () => {
   return (
     <>
       <Pokeball className="opacity-15 fixed scale-[1.4] sm:scale-[2.3] sm:translate-y-5 sm:translate-x-4 md:scale-[2.5]  rotate-45" />
-      <main className="h-screen flex flex-col gap-4 sm:gap-7 px-8 py-8 sm:px-12 sm:py-8 md:px-14 md:py-10 w-full bg-gray-100">
+      <main className="overflow-auto h-screen flex flex-col gap-2 px-8 py-8 sm:px-12 sm:py-8 md:px-14 md:py-10 w-full bg-gray-100">
         <Navbar />
         <Routes>
           <Route path="/home" element={<Home />} />
