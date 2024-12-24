@@ -30,7 +30,18 @@ export interface pokemonTypeData {
   };
 }
 
-interface pokemonImage {
+export interface pokemonImage {
+  other: {
+    home: {
+      front_default: string;
+      back_default?: string;
+      front_shiny?: string;
+      back_shiny?: string;
+    };
+    "official-artwork": {
+      front_default: string;
+    };
+  };
   versions: {
     "generation-v": {
       "black-white": {
@@ -43,6 +54,12 @@ interface pokemonImage {
   };
 }
 
+export interface EvolutionData {
+  sprites: pokemonImage;
+  name: string;
+  level: number | null;
+}
+
 export interface pokemonSub {
   abilities: pokemonAbility[];
   image: pokemonImage;
@@ -52,6 +69,9 @@ export interface pokemonSub {
   description: string | null;
   gender_rate: number;
   stats: pokemonStat[];
+  height: number;
+  weight: number;
+  id: number;
 }
 
 export interface pokemonDetail {
