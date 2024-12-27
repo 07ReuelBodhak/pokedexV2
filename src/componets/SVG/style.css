@@ -20,3 +20,7 @@
   word-wrap: break-word;
   word-break: break-all;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

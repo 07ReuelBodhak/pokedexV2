@@ -1,0 +1,121 @@
+.banner-text {
+  animation: marque 4s linear infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+.about {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes marque {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-text {
+    animation: marque 4s linear infinite;
+  }
+
+  @keyframes marque {
+    0% {
+      transform: translateX(-150%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .banner-text {
+    animation: marque 4s linear infinite;
+  }
+
+  @keyframes marque {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-text {
+    animation: marque 4s linear infinite;
+  }
+
+  @keyframes marque {
+    0% {
+      transform: translateX(-130%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.banner-text2 {
+  animation: marque2 4s linear infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes marque2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-130%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-text2 {
+    animation: marque2 4s linear infinite;
+  }
+
+  @keyframes marque2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-140%);
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .banner-text2 {
+    animation: marque2 4s linear infinite;
+  }
+
+  @keyframes marque2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-90%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-text2 {
+    animation: marque2 4s linear infinite;
+  }
+
+  @keyframes marque2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-140%);
+    }
+  }
+}

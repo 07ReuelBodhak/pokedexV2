@@ -89,8 +89,10 @@ const PokemonDetails: React.FC<classProps> = ({
         return "bg-yellow-800";
       case "psychic":
         return "bg-purple-900";
+      case "dragon":
+        return "bg-yellow-600";
       case "normal":
-        return "bg-blue-700";
+        return "bg-blue-500";
       case "steel":
         return "bg-gray-700";
       case "fighting":
@@ -113,7 +115,7 @@ const PokemonDetails: React.FC<classProps> = ({
   const genderRate = pokemonSelected?.gender_rate ?? 0;
 
   return (
-    <div className="hidden relative rounded-xl lg:block width sticky top-3 h-[69%] translate-y-16 shadow-lg bg-white">
+    <div className="hidden rounded-xl lg:block width sticky top-3 h-[80vh] translate-y-16 shadow-lg bg-white">
       <div className="absolute right-2 top-10 z-10">
         <GenderSymbols gender={determineGender(genderRate)} />
       </div>
@@ -129,7 +131,10 @@ const PokemonDetails: React.FC<classProps> = ({
         <h1 className=" font-mono font-bold text-2xl">
           {pokemonSelected?.name}
         </h1>
-        <div ref={scrollRef} className="scroll-smooth h-[370px] overflow-auto">
+        <div
+          ref={scrollRef}
+          className="scroll-smooth h-[52vh] no-scrollbar overflow-auto"
+        >
           <div className="flex flex-wrap gap-3 justify-center items-center mt-2 z-20">
             {pokemonSelected?.types.map((type, id) => (
               <div
@@ -264,4 +269,4 @@ const PokemonDetails: React.FC<classProps> = ({
   );
 };
 
-export default PokemonDetails;
+export default React.memo(PokemonDetails);

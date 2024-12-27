@@ -1,0 +1,18 @@
+.home {
+  scrollbar-width: thin;
+  scrollbar-color: red gray;
+}
+
+.home::-webkit-scrollbar {
+  width: 20px;
+}
+
+.home::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 20px;
+}
+
+.home::-webkit-scrollbar-track {
+  background-color: gray;
+  border-radius: 20px;
+}

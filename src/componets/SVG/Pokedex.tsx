@@ -102,8 +102,10 @@ const Pokedex: React.FC<Props> = ({
         return "bg-yellow-800";
       case "psychic":
         return "bg-purple-900";
+      case "dragon":
+        return "bg-yellow-600";
       case "normal":
-        return "bg-blue-700";
+        return "bg-blue-500";
       case "steel":
         return "bg-gray-700";
       case "fighting":
@@ -172,6 +174,7 @@ const Pokedex: React.FC<Props> = ({
         />
         <foreignObject x="30" y="79" width="200" height="270">
           <div
+            style={{ scrollbarWidth: "none" }}
             ref={scrollContainerRef}
             className="relative scroll-smooth gap-4 overflow-auto flex flex-col h-full w-full"
           >
@@ -192,7 +195,7 @@ const Pokedex: React.FC<Props> = ({
                   {pokemonDetail?.name}
                 </h1>
               </div>
-              <div className="w-1/2 p-1 overflow-auto">
+              <div className="w-1/2 p-1 no-scrollbar overflow-auto">
                 <p className=" font-semibold text-sm break">
                   {pokemonDetail?.description}
                 </p>
@@ -327,4 +330,4 @@ const Pokedex: React.FC<Props> = ({
   );
 };
 
-export default Pokedex;
+export default React.memo(Pokedex);

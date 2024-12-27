@@ -38,8 +38,10 @@ const Card: React.FC<CardProps> = ({
         return "bg-yellow-800";
       case "psychic":
         return "bg-purple-900";
+      case "dragon":
+        return "bg-yellow-600";
       case "normal":
-        return "bg-blue-700";
+        return "bg-blue-500";
       case "steel":
         return "bg-gray-700";
       case "fighting":
@@ -64,7 +66,7 @@ const Card: React.FC<CardProps> = ({
         onClick={() => handleClick(id)}
         className={`${
           selectedPokemon === name ? "border-red-600" : ""
-        } relative bg-s sm:cursor-pointer transition-all ease-out border-b-2 duration-200 hover:border-red-600 shadow-md h-36 flex justify-center md:w-[90%] lg:w-[80%] sm:w-40 items-center flex-col p-3 z-10 rounded-2xl bg-white`}
+        }  relative sm:cursor-pointer transition-all ease-out border-b-2 duration-200 hover:border-red-600 shadow-md h-36 flex justify-center md:w-[90%] lg:w-[80%] sm:w-40 items-center flex-col p-3 z-10 rounded-2xl bg-white`}
       >
         <img className="absolute -top-7 w-16 h-16" src={image} alt={name} />
         <h1 className="mt-5 text-lg text-center font-semibold">{name}</h1>
@@ -85,4 +87,4 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card;
+export default React.memo(Card);

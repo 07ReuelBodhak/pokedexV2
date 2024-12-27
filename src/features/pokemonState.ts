@@ -50,6 +50,7 @@ export interface pokemonImage {
           front_default: string;
         };
       };
+      front_default: string;
     };
   };
 }
@@ -72,6 +73,7 @@ export interface pokemonSub {
   height: number;
   weight: number;
   id: number;
+  index: number;
 }
 
 export interface pokemonDetail {

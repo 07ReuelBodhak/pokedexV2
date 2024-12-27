@@ -27,3 +27,23 @@ export const fetchPokemon =
       dispatch(fetchPokemonFailure(error.message));
     }
   };
+
+export const types = [
+  "grass",
+  "poison",
+  "fire",
+  "water",
+  "flying",
+  "bug",
+  "ice",
+  "ground",
+  "psychic",
+  "normal",
+  "steel",
+  "fighting",
+  "dark",
+  "electric",
+  "fairy",
+  "ghost",
+  "rock",
+];
