@@ -54,7 +54,7 @@ const App = () => {
       <main
         ref={mainRef}
         onScroll={handleScroll}
-        className="home overflow-auto scroll-smooth h-screen flex flex-col gap-2 px-8 py-2 sm:px-12 sm:py-4 md:px-14 md:py-8 w-full bg-gray-50"
+        className="home overflow-auto scroll-smooth h-screen flex flex-col gap-2 px-1 py-2 sm:px-12 sm:py-4 md:px-14 md:py-8 w-full bg-gray-50"
       >
         <Navbar />
         <Routes>
