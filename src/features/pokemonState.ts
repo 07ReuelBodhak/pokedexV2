@@ -31,6 +31,7 @@ export interface pokemonTypeData {
 }
 
 export interface pokemonImage {
+  front_default: string;
   other: {
     home: {
       front_default: string;

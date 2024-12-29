@@ -90,6 +90,7 @@ const Home: React.FC<classProps> = ({
 
               const sprites = details.sprites;
               const image = {
+                front_default: sprites.front_default,
                 other: {
                   home: {
                     front_default: sprites.other.home.front_default || "",
@@ -216,7 +217,8 @@ const Home: React.FC<classProps> = ({
             "black-white"
           ].animated.front_default ||
           sortedPokemonList[previousIndex].image.versions["generation-v"]
-            .front_default
+            .front_default ||
+          sortedPokemonList[previousIndex].image.front_default
         : "",
   };
 
@@ -235,7 +237,8 @@ const Home: React.FC<classProps> = ({
             "black-white"
           ].animated.front_default ||
           sortedPokemonList[nextIndex].image.versions["generation-v"]
-            .front_default
+            .front_default ||
+          sortedPokemonList[nextIndex].image.front_default
         : "",
   };
 
@@ -336,7 +339,8 @@ const Home: React.FC<classProps> = ({
                 image={
                   pokemon.image.versions["generation-v"]["black-white"].animated
                     .front_default ||
-                  pokemon.image.versions["generation-v"].front_default
+                  pokemon.image.versions["generation-v"].front_default ||
+                  pokemon.image.front_default
                 }
               />
             </div>
