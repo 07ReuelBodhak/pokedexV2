@@ -6,6 +6,7 @@ import { RootState, AppDispatch } from "../../store";
 import Card from "../Card/Card";
 import Pokedex from "../SVG/Pokedex";
 import { pokemonSub } from "../../features/pokemonState";
+import { useNavigate } from "react-router-dom";
 import PokemonDetails from "../Pokedex/PokemonDetails";
 import DownwardChevron from "../SVG/DownwardChevron";
 import { usePokemon } from "../../Hooks/usePokemon";
@@ -29,6 +30,7 @@ const Home: React.FC<classProps> = ({
   setBottomReached,
   isScrolling,
 }) => {
+  const naviagte = useNavigate();
   const [pokemonSelected, setPokemonSelected] = useState<pokemonSub | null>(
     null
   );
@@ -146,7 +148,7 @@ const Home: React.FC<classProps> = ({
         setBottomReached(false);
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching Pokémon:", error);
+        naviagte("error");
         setIsLoading(false);
       }
     };

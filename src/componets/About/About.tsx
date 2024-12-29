@@ -97,11 +97,10 @@ const About: React.FC = () => {
           <p>Connect with me:</p>
           <div className="flex justify-center space-x-4 mt-4">
             {[
-              { name: "GitHub", link: "https://github.com/yourusername" },
-              { name: "Twitter", link: "https://twitter.com/yourusername" },
+              { name: "GitHub", link: "https://github.com/07ReuelBodhak" },
               {
                 name: "LinkedIn",
-                link: "https://linkedin.com/in/yourusername",
+                link: "https://www.linkedin.com/in/reuel-b-155815300/",
               },
             ].map((social, index) => (
               <a
