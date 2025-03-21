@@ -93,7 +93,7 @@ const About: React.FC = () => {
 
       <footer className="bg-red-600 font-mono lg:text-xl md:text-lg text-black py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="mb-2">© 2024 Your Pokedex App. All rights reserved.</p>
+          <p className="mb-2">© 2025 Your Pokedex App. All rights reserved.</p>
           <p>Connect with me:</p>
           <div className="flex justify-center space-x-4 mt-4">
             {[

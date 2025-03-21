@@ -126,7 +126,7 @@ const PokemonDetails: React.FC<classProps> = ({
           alt={pokemonSelected?.name}
         />
         <span className="text-gray-400 font-mono text-md">
-          #{(pokemonSelected?.id ?? 0) + 1}
+          #{pokemonSelected?.id ?? 0}
         </span>
         <h1 className=" font-mono font-bold text-2xl">
           {pokemonSelected?.name}
